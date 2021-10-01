@@ -1,5 +1,6 @@
 package com.infnet.trabalho.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,7 +13,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Invoice {
+public class Invoice implements Serializable{
+
+	private static final long serialVersionUID = -1626061574231258365L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

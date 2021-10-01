@@ -1,5 +1,6 @@
 package com.infnet.trabalho.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -11,7 +12,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Job {
+public class Job implements Serializable{
+
+	private static final long serialVersionUID = -8037362810904827938L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +31,7 @@ public class Job {
 	private List<Invoice> invoices;
 	
 	@OneToMany
-	private List<OtherItem> otherItems;
+	private List<OrderItem> otherItems;
 
 	public Long getId() {
 		return id;

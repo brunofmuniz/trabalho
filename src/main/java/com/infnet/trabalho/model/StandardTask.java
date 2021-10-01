@@ -1,5 +1,6 @@
 package com.infnet.trabalho.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
@@ -8,8 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class StandardTask {
+public class StandardTask implements Serializable{
 
+	private static final long serialVersionUID = 2095247652985318180L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

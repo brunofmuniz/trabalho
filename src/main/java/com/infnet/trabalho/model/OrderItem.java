@@ -1,5 +1,6 @@
 package com.infnet.trabalho.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
@@ -9,8 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class OtherItem {
+public class OrderItem implements Serializable{
 
+	private static final long serialVersionUID = -228320987736719950L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
